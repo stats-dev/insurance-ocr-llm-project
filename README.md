@@ -40,8 +40,8 @@
 ### 2. Installation
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/medical-ocr-agent.git
-cd medical-ocr-agent
+git clone https://github.com/stats-dev/insurance-ocr-llm-project.git
+cd insurance-ocr-llm-project
 
 # Initialize and install dependencies with uv
 uv sync
