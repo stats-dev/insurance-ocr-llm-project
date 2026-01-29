@@ -7,8 +7,8 @@
 
 > **"비정형 보험금 청구서를 정형 데이터(JSON)로 변환하는 AI 에이전트"**
 
-이 프로젝트는 **OCR(광학 문자 인식)**의 한계를 **LLM(대거대 언어 모델)**의 문맥 이해 능력으로 보완하는 **Data-Centric AI** 접근 방식을 보여줍니다. 
-뭉개지거나 흐릿한 보험금 청구서 이미지에서도 핵심 정보(청구인, 사고일, 진단명, 계좌번호 등)를 정확하게 추출합니다.
+이 프로젝트는 **OCR(광학 문자 인식)** 의 한계를 **LLM(대거대 언어 모델)** 의 문맥 이해 능력으로 보완하는 **Data-Centric AI** 접근 방식을 보여줍니다. 
+뭉개지거나 흐릿한 보험금 청구서 이미지에서도 핵심 정보(`청구인`, `사고일`, `진단명`, `청구금액`, `은행명`, `계좌번호` 등)를 정확하게 추출합니다.
 
 ---
 
@@ -63,13 +63,13 @@ streamlit run app.py
 
 ## 📸 Workflow
 
-1.  **Guest Access**: View demo images and pre-computed JSON results.
-2.  **Admin Login**: Enter password in the sidebar to unlock features.
-3.  **Upload**: Upload an image of an "Insurance Claim Form".
-4.  **Process**: 
-    - **Step 1 (OCR)**: Extracts raw text (often contains errors).
-    - **Step 2 (LLM)**: Corrects errors and extracts fields: `claimant_name`, `accident_date`, `diagnosis_name`, `claim_amount`, `bank_name`, `account_number`.
-5.  **Export**: Download the result as a `.json` file.
+1.  **게스트 접속 (Guest Access)**: 데모 이미지와 사전 계산된 JSON 결과만 확인 가능합니다.
+2.  **관리자 로그인 (Admin Login)**: 사이드바에 비밀번호를 입력하여 모든 기능을 잠금 해제합니다.
+3.  **이미지 업로드 (Upload)**: '보험금 청구서' 이미지를 업로드합니다.
+4.  **AI 분석 (Process)**: 
+    - **1단계 (OCR)**: 이미지에서 원시 텍스트를 추출합니다 (오타 포함 가능).
+    - **2단계 (LLM)**: 문맥을 파악하여 오타를 수정하고 핵심 정보(`claimant_name`, `accident_date`, `diagnosis_name`, `claim_amount`, `bank_name`, `account_number`)를 추출합니다.
+5.  **결과 다운로드 (Export)**: 분석된 결과를 `.json` 파일로 다운로드합니다.
 
 ## 📂 Project Structure
 
