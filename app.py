@@ -181,9 +181,12 @@ else:
     
     with demo_col1:
         st.subheader("📄 [예시] 입력 이미지")
-        # Github에 올라간 데모 이미지 사용
-        sample_img_url = "https://github.com/user-attachments/assets/10e4e68c-9842-45e1-8053-89028d4eef53"
-        st.image(sample_img_url, caption="예시 보험금 청구서", use_column_width=True)
+        # 로컬 데모 이미지 사용
+        sample_img_path = "assets/sample_image.jpg"
+        if os.path.exists(sample_img_path):
+            st.image(sample_img_path, caption="예시 보험금 청구서", use_column_width=True)
+        else:
+             st.error("데모 이미지를 찾을 수 없습니다.")
         
         st.subheader("Raw OCR Result")
         st.code("... 청구인: 홍길동 ... 사고일: 2024년 1월 1일 ... 진단명: 골절 ...", language="text")
