@@ -8,7 +8,7 @@
 > **"비정형 보험금 청구서를 정형 데이터(JSON)로 변환하는 AI 에이전트"**
 
 이 프로젝트는 **OCR(광학 문자 인식)** 의 한계를 **LLM(대거대 언어 모델)** 의 문맥 이해 능력으로 보완하는 **Data-Centric AI** 접근 방식을 보여줍니다. 
-뭉개지거나 흐릿한 보험금 청구서 이미지에서도 핵심 정보(`청구인`, `사고일`, `진단명`, `청구금액`, `은행명`, `계좌번호` 등)를 추출합니다.
+뭉개지거나 흐릿한 보험금 청구서 이미지에서도 핵심 정보(`청구인`, `사고일`, `진단명`, `은행명`, `계좌번호` 등)를 추출합니다.
 
 ---
 
@@ -68,7 +68,7 @@ uv run streamlit run app.py
 3.  **이미지 업로드 (Upload)**: '보험금 청구서' 이미지를 업로드합니다.
 4.  **AI 분석 (Process)**: 
     - **1단계 (OCR)**: 이미지에서 원시 텍스트를 추출합니다 (오타 포함 가능).
-    - **2단계 (LLM)**: 문맥을 파악하여 오타를 수정하고 핵심 정보(`claimant_name`, `accident_date`, `diagnosis_name`, `claim_amount`, `bank_name`, `account_number`)를 추출합니다.
+    - **2단계 (LLM)**: 문맥을 파악하여 오타를 수정하고 핵심 정보(`claimant_name`, `accident_date`, `diagnosis_name`, `bank_name`, `account_number`)를 추출합니다.
 5.  **결과 다운로드 (Export)**: 분석된 결과를 `.json` 파일로 다운로드합니다.
 
 ## 📂 Project Structure

@@ -81,7 +81,6 @@ def correction_with_llm(raw_text):
     - claimant_name (청구인/피보험자 성명)
     - accident_date (사고일자/발병일, YYYY-MM-DD 형식)
     - diagnosis_name (진단명 또는 청구사유. 예: '발목 염좌', '독감' 등)
-    - claim_amount (청구금액, 없을 경우 '0' 또는 추정)
     - bank_name (지급받을 계좌 은행명)
     - account_number (지급받을 계좌번호, 숫자만)
 
@@ -182,11 +181,9 @@ else:
     
     with demo_col1:
         st.subheader("📄 [예시] 입력 이미지")
-        # 플레이스홀더 이미지 생성 (흰색 배경에 텍스트)
-        img = np.zeros((400, 300, 3), dtype=np.uint8)
-        img.fill(255)
-        cv2.putText(img, "Insurance Claim", (50, 200), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,0,0), 2)
-        st.image(img, caption="예시 보험금 청구서", use_column_width=True)
+        # Github에 올라간 데모 이미지 사용
+        sample_img_url = "https://github.com/user-attachments/assets/10e4e68c-9842-45e1-8053-89028d4eef53"
+        st.image(sample_img_url, caption="예시 보험금 청구서", use_column_width=True)
         
         st.subheader("Raw OCR Result")
         st.code("... 청구인: 홍길동 ... 사고일: 2024년 1월 1일 ... 진단명: 골절 ...", language="text")
@@ -197,7 +194,6 @@ else:
             "claimant_name": "홍길동",
             "accident_date": "2024-01-01",
             "diagnosis_name": "우측 발목 골절",
-            "claim_amount": "150000",
             "bank_name": "신한은행",
             "account_number": "110-123-456789"
         })
