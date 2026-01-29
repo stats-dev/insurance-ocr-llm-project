@@ -41,7 +41,8 @@ genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 # EasyOCR Reader 로드 (한국어, 영어) -> 캐싱하여 속도 향상
 @st.cache_resource
 def load_ocr_model():
-    return easyocr.Reader(['ko', 'en'])
+    # Streamlit Cloud는 CPU 환경이므로 gpu=False로 설정하여 경고 제거 및 호환성 확보
+    return easyocr.Reader(['ko', 'en'], gpu=False)
 
 reader = load_ocr_model()
 

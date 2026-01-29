@@ -43,8 +43,8 @@
 git clone https://github.com/your-username/medical-ocr-agent.git
 cd medical-ocr-agent
 
-# Install dependencies
-pip install streamlit easyocr google-generativeai opencv-python pandas
+# Initialize and install dependencies with uv
+uv sync
 ```
 
 ### 3. Configuration (Secrets)
@@ -58,7 +58,7 @@ ADMIN_PASSWORD = "YOUR_ADMIN_PASSWORD"
 
 ### 4. Run App
 ```bash
-streamlit run app.py
+uv run streamlit run app.py
 ```
 
 ## 📸 Workflow

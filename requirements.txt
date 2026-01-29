@@ -1,0 +1,6 @@
+streamlit
+easyocr
+google-generativeai
+pandas
+# opencv-python-headless is required for Streamlit Cloud (avoids libGL.so.1 error)
+opencv-python-headless

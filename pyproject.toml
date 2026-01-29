@@ -1,0 +1,13 @@
+[project]
+name = "ocr-project"
+version = "0.1.0"
+description = "Insurance Claim OCR Agent powered by EasyOCR and Gemini LLM"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "easyocr>=1.7.2",
+    "google-generativeai>=0.8.6",
+    "opencv-python>=4.13.0.90",
+    "pandas>=2.3.3",
+    "streamlit>=1.53.1",
+]
