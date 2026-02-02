@@ -204,4 +204,4 @@ else:
 
 # 하단 설명
 st.divider()
-st.info("💡 **Tip:** 일반 OCR 라이브러리 한계를 LLM의 '문맥 이해 능력'으로 보정하는 **Data-Centric AI** 접근 방식을 보여줍니다.")
+st.info("💡 **Tip:** 일반 OCR 라이브러리 한계를 LLM의 '문맥 이해 능력'으로 보정하는 **Data-Centric AI** 접근 방식을 보여줍니다")
